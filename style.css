@@ -42,6 +42,13 @@
     font-size: 20px;
   }
 
+  button{
+    height: 25px;
+    background-color: #FFFFFF;
+    padding-left: 2px;
+    cursor: pointer;
+  }
+
   /* --NAV SECTION-- */
 
   @keyframes move {
@@ -49,18 +56,27 @@
       transform: translateX(-50%);
     }
   }
+
+  @keyframes invertbg {
+    from {background-color: #ffffff;}
+    to {background-color: #000000;}
+  }
+
+  @keyframes inverttx {
+    from {color: #000000;}
+    to {color: #FFFFFF;}
+  }
   
   .nav1{
     overflow :hidden;
-    width: 260px;
+    width: 240px;
     display:inline-block;
     border: 1px solid #000000;
-    height: 20px;
     white-space: nowrap;
   }
   
   .container1{
-    width: 520px;
+    width: 480px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -70,23 +86,23 @@
   }
 
   .nav1Text{
-    font-size: 20px;
+    font-size: 18px;
     margin:0;
     padding-left:0px;
-    width:260px;
+    width:240px;
+    text-align: left;
   }
 
   .nav2{
     overflow :hidden;
-    width: 248px;
+    width: 230px;
     display:inline-block;
     border: 1px solid #000000;
-    height: 20px;
     white-space: nowrap;
   }
   
   .container2{
-    width: 496px;
+    width: 460px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -96,23 +112,31 @@
   }
 
   .nav2Text{
-    font-size: 20px;
+    font-size: 18px;
     margin:0;
     padding-left:0px;
-    width:248px;
+    width:230px;
+    text-align: left;
   }
 
   .nav3{
     overflow :hidden;
-    width: 118px;
+    width: 110px;
     display:inline-block;
     border: 1px solid #000000;
-    height: 20px;
     white-space: nowrap;
   }
+
+  .nav3:hover{
+    animation: invertbg 0.5s forwards ease-in;
+  }
   
+  .nav3:after{
+    animation: invertbg 0.5s reverse ease-in;
+  }
+
   .container3{
-    width: 236px;
+    width: 220px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -122,8 +146,13 @@
   }
 
   .nav3Text{
-    font-size: 20px;
+    font-size: 18px;
     margin:0;
     padding-left:0px;
-    width:118px;
+    width:110px;
+    text-align: left;
+  }
+
+  .container3:hover > .nav3Text{
+    animation: inverttx 0.5s forwards linear;
   }

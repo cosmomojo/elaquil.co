@@ -1,0 +1,41 @@
+.socialBubble {
+    height: 25px;
+    width: 25px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #000000;
+  }
+
+  section{
+    overflow :hidden;
+    width: 220px;
+    display:inline-block;
+    border: 1px solid #000000;
+    height: 20px;
+    white-space: nowrap;
+  }
+  
+  #container{
+    width: 440px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  #container:hover{
+    width: 440px;
+    display: flex;
+    flex-wrap: nowrap;
+    animation: move 1.5s infinite ease-in-out; /* set the time to what you want of course */
+  }
+  @keyframes move {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  h3{
+    font-size: 20px;
+    margin:0;
+    padding-left:0px;
+    width:220px;
+  }

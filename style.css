@@ -9,150 +9,182 @@
 }
 
 .socialBubble {
-    height: 25px;
-    width: 25px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
-    border: 2px solid #000000;
-  }
+  height: 25px;
+  width: 25px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #000000;
+}
 
-  h1{
-    font-family: 'Helvetica Neue LT Std';
-    font-size: 62px;
-    color: #000000;
-    text-align: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-  }
+h1{
+  font-family: 'Helvetica Neue LT Std';
+  font-size: 62px;
+  color: #000000;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
 
-  h2{
-    font-family: ocr-b-std, monospace;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 27px;
-  }
+h2{
+  font-family: ocr-b-std, monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+}
 
-  p{
-    font-family: ocr-b-std, monospace;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-  }
+p{
+  font-family: ocr-b-std, monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
 
-  button{
-    height: 25px;
-    background-color: #FFFFFF;
-    padding-left: 2px;
-    cursor: pointer;
-  }
+button{
+  height: 25px;
+  background-color: #FFFFFF;
+  padding-left: 2px;
+  cursor: pointer;
+  transition: 0.05s all;
+  margin-left: -5px;
+  margin-top: -1px;
+}
 
-  /* --NAV SECTION-- */
+button:active{
+  background-color: #000000;
+}
 
-  @keyframes move {
-    to {
-      transform: translateX(-50%);
-    }
-  }
+button:active>div>h2{
+  color: #FFFFFF;
+}
 
-  @keyframes invertbg {
-    from {background-color: #ffffff;}
-    to {background-color: #000000;}
-  }
+.nav{
+  margin-left: 67px;
+}
 
-  @keyframes inverttx {
-    from {color: #000000;}
-    to {color: #FFFFFF;}
-  }
-  
-  .nav1{
-    overflow :hidden;
-    width: 240px;
-    display:inline-block;
-    border: 1px solid #000000;
-    white-space: nowrap;
-  }
-  
-  .container1{
-    width: 480px;
-    display: flex;
-    flex-wrap: nowrap;
-  }
+/* --NAV SECTION-- */
 
-  .container1:hover{
-    animation: move 1.5s infinite ease-in-out; /* set the time to what you want of course */
+@keyframes move {
+  to {
+    transform: translateX(-50%);
   }
+}
 
-  .nav1Text{
-    font-size: 18px;
-    margin:0;
-    padding-left:0px;
-    width:240px;
-    text-align: left;
-  }
+@keyframes invertbg {
+  from {background-color: #ffffff;}
+  to {background-color: #000000;}
+}
 
-  .nav2{
-    overflow :hidden;
-    width: 230px;
-    display:inline-block;
-    border: 1px solid #000000;
-    white-space: nowrap;
-  }
-  
-  .container2{
-    width: 460px;
-    display: flex;
-    flex-wrap: nowrap;
-  }
+@keyframes inverttx {
+  from {color: #000000;}
+  to {color: #FFFFFF;}
+}
 
-  .container2:hover{
-    animation: move 1.5s infinite ease-in-out; /* set the time to what you want of course */
-  }
+.navButton{
+  overflow :hidden;
+  display:inline-block;
+  border: 1px solid #000000;
+  white-space: nowrap;
+}
 
-  .nav2Text{
-    font-size: 18px;
-    margin:0;
-    padding-left:0px;
-    width:230px;
-    text-align: left;
-  }
+.navContainer:hover{
+  animation: move 1.5s infinite ease-in-out; /* set the time to what you want of course */
+}
 
-  .nav3{
-    overflow :hidden;
-    width: 110px;
-    display:inline-block;
-    border: 1px solid #000000;
-    white-space: nowrap;
-  }
+.navContainer{
+  display: flex;
+  flex-wrap: nowrap;
+}
 
-  .nav3:hover{
-    animation: invertbg 0.5s forwards ease-in;
-  }
-  
-  .nav3:after{
-    animation: invertbg 0.5s reverse ease-in;
-  }
+.navText{
+  font-size: 18px;
+  margin:0;
+  padding-left:0px;
+  text-align: left;
+}
 
-  .container3{
-    width: 220px;
-    display: flex;
-    flex-wrap: nowrap;
-  }
+.nav1{
+  width: 240px;
+}
 
-  .container3:hover{
-    animation: move 1.5s infinite ease-in-out; /* set the time to what you want of course */
-  }
+.container1{
+  width: 480px;
+}
 
-  .nav3Text{
-    font-size: 18px;
-    margin:0;
-    padding-left:0px;
-    width:110px;
-    text-align: left;
-  }
+.nav1Text{
+  width:240px;
+}
 
-  .container3:hover > .nav3Text{
-    animation: inverttx 0.5s forwards linear;
-  }
+.nav2{
+  width: 230px;
+}
+
+.container2{
+  width: 460px;
+}
+
+.nav2Text{
+  width:230px;
+}
+
+.nav3{
+  width: 110px;
+}
+
+/*
+.nav3:hover{
+  animation: invertbg 0.5s forwards ease-in;
+}
+*/
+
+.container3{
+  width: 220px;
+}
+
+.nav3Text{
+  width:110px;
+}
+
+/*
+.container3:hover > .nav3Text{
+  animation: inverttx 0.5s forwards linear;
+}
+*/
+
+.nav4{
+  width: 70px;
+}
+
+.container4{
+  width: 140px;
+}
+
+.nav4Text{
+  width:70px;
+}
+
+.nav5{
+  width: 230px;
+}
+
+.container5{
+  width: 460px;
+}
+
+.nav5Text{
+  width:230px;
+}
+
+.nav6{
+  width: 240px;
+}
+
+.container6{
+  width: 480px;
+}
+
+.nav6Text{
+  width:240px;
+}

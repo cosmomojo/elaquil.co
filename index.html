@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,26 @@
         <link rel="stylesheet" href="https://use.typekit.net/tkk8crj.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="navArea.css">
         <script src="default.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/0c7165f7a1.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
+        <a href="#top">
+            <button class="toTopButton navButton" id="toTop">
+                <div class="toTopContainer navContainer">
+                <h2 class="toTopText navText">GO TO TOP</h2>
+                <h2 class="toTopText navText">GO TO TOP</h2>
+                </div>
+            </button>
+        </a>
+
         <!-- Landing Area -->
 
-        <div class="introduction">
+        <section class="introduction" id="firstDiv">
             <header>
                 <div class="intro">
                     <h2>my name is</h2>
@@ -52,82 +62,107 @@
             <div class="nav">
                 <div class ="navBlock1">
 
-                    <button href="#intro" class="nav1 navButton">
-                        <a href="#" class="navlink"></a>
-                        <div class="container1 navContainer">
-                        <h2 class="nav1Text navText">1. MOTION GRAPHICS</h2>
-                        <h2 class="nav1Text navText">1. MOTION GRAPHICS</h2>
-                        </div>
-                    </button>
+                    <a href="#section1">
+                        <button class="nav1 navButton">
+                            <div class="container1 navContainer">
+                            <h2 class="nav1Text navText">1. MOTION GRAPHICS</h2>
+                            <h2 class="nav1Text navText">1. MOTION GRAPHICS</h2>
+                            </div>
+                        </button>
+                    </a>
 
-                    <button href="#intro" class="nav2 navButton">
-                        <a href="#" class="navlink"></a>
-                        <div class="container2 navContainer">
-                        <h2 class="nav2Text navText">2. GRAPHIC DESIGN</h2>
-                        <h2 class="nav2Text navText">2. GRAPHIC DESIGN</h2>
-                        </div>
-                    </button>
+                    <a href="#section2">
+                        <button class="nav2 navButton">
+                            <div class="container2 navContainer">
+                            <h2 class="nav2Text navText">2. GRAPHIC DESIGN</h2>
+                            <h2 class="nav2Text navText">2. GRAPHIC DESIGN</h2>
+                            </div>
+                        </button>
+                    </a>
 
                 </div>
 
                 <div class ="navBlock2">
 
-                    <button href="#intro" class="nav3 navButton">
-                        <a href="#" class="navlink"></a>
-                        <div class="container3 navContainer">
-                        <h2 class="nav3Text navText">3. VIDEO</h2>
-                        <h2 class="nav3Text navText">3. VIDEO</h2>
-                        </div>
-                    </button>
+                    <a href="#section3"></a>
+                        <button class="nav3 navButton">
+                            <div class="container3 navContainer">
+                            <h2 class="nav3Text navText">3. VIDEO</h2>
+                            <h2 class="nav3Text navText">3. VIDEO</h2>
+                            </div>
+                        </button>
+                    </a>
 
-                    <button href="#intro" class="nav4 navButton">
-                        <a href="#" class="navlink"></a>
-                        <div class="container4 navContainer">
-                        <h2 class="nav4Text navText">4. 3D</h2>
-                        <h2 class="nav4Text navText">4. 3D</h2>
-                        </div>
-                    </button>
+                    <a href="#section4"></a>
+                        <button class="nav4 navButton">
+                            <div class="container4 navContainer">
+                            <h2 class="nav4Text navText">4. 3D</h2>
+                            <h2 class="nav4Text navText">4. 3D</h2>
+                            </div>
+                        </button>
+                    </a>
 
-                    <button href="#intro" class="nav5 navButton">
-                        <a href="#" class="navlink"></a>
-                        <div class="container5 navContainer">
-                        <h2 class="nav5Text navText">5. PRODUCT DESIGN</h2>
-                        <h2 class="nav5Text navText">5. PRODUCT DESIGN</h2>
-                        </div>
-                    </button>
+                    <a href="#section5">
+                        <button class="nav5 navButton">
+                            <div class="container5 navContainer">
+                            <h2 class="nav5Text navText">5. PRODUCT DESIGN</h2>
+                            <h2 class="nav5Text navText">5. PRODUCT DESIGN</h2>
+                            </div>
+                        </button>
+                    </a>
 
                 </div>
 
                 <div class ="navBlock3">
 
-                    <button href="#intro" class="nav6 navButton">
-                        <a href="#" class="navlink"></a>
-                        <div class="container6 navContainer">
-                        <h2 class="nav6Text navText">6. WEB DEVELOPMENT</h2>
-                        <h2 class="nav6Text navText">6. WEB DEVELOPMENT</h2>
-                        </div>
-                    </button>
+                    <a href="#section6">
+                        <button class="nav6 navButton">
+                            <div class="container6 navContainer">
+                            <h2 class="nav6Text navText">6. WEB DEVELOPMENT</h2>
+                            <h2 class="nav6Text navText">6. WEB DEVELOPMENT</h2>
+                            </div>
+                        </button>
+                    </a>
 
                 </div>
             </div>
-        </div> 
+        </section> 
 
         <!-- 1. MOTION GRAPHICS -->
-
-        <div class="section1 mainSection">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <section class="section1 mainSection" id="section1">
             <header class="section1Head mainSectionHead">
                 <h1 class="section1Title mainSectionTitle">1. MOTION GRAPHICS</h1>
             </header>
             <div class="section1Content mainSectionContent">
                 <div class="section1Item1 mainSectionItem">
-                    <h2 class="workTitle mainSectionWorkTitle">example project (2022) [Adobe After Effects + C4D] <br>for @exampleClient</h2>
-                    <img src="https://64.media.tumblr.com/a79fe4f91363a3df7ab137f2b573d2e6/tumblr_prqkg5PJ4v1tyalq6o1_1280.jpg" class="workImage">
+                    <h2 class="workTitle1 mainSectionWorkTitle">example project (2022) [Adobe After Effects + C4D] <br>for @exampleClient</h2>
+                    <img src="https://64.media.tumblr.com/a79fe4f91363a3df7ab137f2b573d2e6/tumblr_prqkg5PJ4v1tyalq6o1_1280.jpg" onclick="img_box(this)" class="1.1.1 workImage">
                     <p class="workDescription mainSectionWorkDescription">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec euismod, nisl eget consectetur consectetur.
+                    </p>
                 </div>
             </div>
-        </div> 
+        </section> 
 
     </body>
+
 </html>

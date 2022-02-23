@@ -1,3 +1,5 @@
+/* Fonts */
+
 @font-face {
     font-family: 'Helvetica Neue LT Std';
     src: url('fonts/Helvetica-Neue-LT-Std-93-Black-Extended22550.eot');
@@ -8,18 +10,57 @@
          url('fonts/Helvetica-Neue-LT-Std-93-Black-Extended22550.svg#Helvetica Neue LT Std') format('svg');
 }
 
-.socialBubble {
-  height: 25px;
-  width: 25px;
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 50%;
-  display: inline-block;
-  border: 2px solid #000000;
+/* Custom Properties */
+
+:root{
+
+    --ff-primary: 'Helvetica Neue LT Std';
+    --ff-secondary: ocr-b-std, monospace;
+
+    --fw-thin: 100;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --clr-light: #ffffff;
+    --clr-dark: #000000;
+    --clr-accent: #0071ce;
+
+    --fs-h1: 3.9rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
+    --fs-p: 1rem;
+
+}
+
+@media (max-width: 800px){
+  :root{
+    --fs-h1: 2.3rem;
+    --fs-h2: 1.25rem;
+    --fs-h3: 1rem;
+    --fs-p: 0.75rem;
+  }
+}
+
+/* Main CSS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3{
+  line-height: 1.1;
+  margin: 0;
 }
 
 h1{
-  font-family: 'Helvetica Neue LT Std';
-  font-size: 62px;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-h1);
   color: #000000;
   text-align: left;
   margin-top: 0px;
@@ -29,17 +70,26 @@ h1{
 }
 
 h2{
-  font-family: ocr-b-std, monospace;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 27px;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
 }
 
 p{
-  font-family: ocr-b-std, monospace;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-h3);
+}
+
+img{
+  display: block;
+  width: 25%;
+  height: auto;
+  max-width: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 button{
@@ -52,6 +102,26 @@ button{
   margin-top: -1px;
 }
 
+section{
+  padding: 5em 2em;
+}
+
+.socialBubble {
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff00;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #000000;
+}
+
+@media screen and (max-width: 800px){
+  .socialBubble {
+    height: 35px;
+    width: 35px;
+  }
+}
+
 button:active{
   background-color: #000000;
 }
@@ -61,130 +131,21 @@ button:active>div>h2{
 }
 
 .nav{
-  margin-left: 67px;
+  margin-left: 5px;
 }
 
-/* --NAV SECTION-- */
-
-@keyframes move {
-  to {
-    transform: translateX(-50%);
-  }
+.introduction{
+  padding: 1em 2em;
 }
 
-@keyframes invertbg {
-  from {background-color: #ffffff;}
-  to {background-color: #000000;}
+
+#img_box > img{
+  display: inline;
+  height: 100%;
+  width: auto;
 }
 
-@keyframes inverttx {
-  from {color: #000000;}
-  to {color: #FFFFFF;}
-}
-
-.navButton{
-  overflow :hidden;
-  display:inline-block;
-  border: 1px solid #000000;
-  white-space: nowrap;
-}
-
-.navContainer:hover{
-  animation: move 1.5s infinite ease-in-out; /* set the time to what you want of course */
-}
-
-.navContainer{
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.navText{
-  font-size: 18px;
-  margin:0;
-  padding-left:0px;
-  text-align: left;
-}
-
-.nav1{
-  width: 240px;
-}
-
-.container1{
-  width: 480px;
-}
-
-.nav1Text{
-  width:240px;
-}
-
-.nav2{
-  width: 230px;
-}
-
-.container2{
-  width: 460px;
-}
-
-.nav2Text{
-  width:230px;
-}
-
-.nav3{
-  width: 110px;
-}
-
-/*
-.nav3:hover{
-  animation: invertbg 0.5s forwards ease-in;
-}
-*/
-
-.container3{
-  width: 220px;
-}
-
-.nav3Text{
-  width:110px;
-}
-
-/*
-.container3:hover > .nav3Text{
-  animation: inverttx 0.5s forwards linear;
-}
-*/
-
-.nav4{
-  width: 70px;
-}
-
-.container4{
-  width: 140px;
-}
-
-.nav4Text{
-  width:70px;
-}
-
-.nav5{
-  width: 230px;
-}
-
-.container5{
-  width: 460px;
-}
-
-.nav5Text{
-  width:230px;
-}
-
-.nav6{
-  width: 240px;
-}
-
-.container6{
-  width: 480px;
-}
-
-.nav6Text{
-  width:240px;
+.blurb{
+  text-align: right;
+  margin-left: 50vw;
 }

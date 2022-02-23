@@ -1,0 +1,148 @@
+/* --NAV SECTION-- */
+
+@keyframes move {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes invertbg {
+    from {background-color: #ffffff;}
+    to {background-color: #000000;}
+  }
+  
+  @keyframes inverttx {
+    from {color: #000000;}
+    to {color: #FFFFFF;}
+  }
+  
+  .navButton{
+    overflow :hidden;
+    display:inline-block;
+    border: 1px solid #000000;
+    white-space: nowrap;
+  }
+  
+  .navContainer:hover{
+    animation: move 1.5s infinite ease-in-out;
+  }
+  
+  .navContainer{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .navText{
+    line-height: 1;
+    font-size: 18px;
+    margin:0;
+    padding-left:0px;
+    text-align: left;
+  }
+  
+  .nav1{
+    width: 245px;
+  }
+  
+  .container1{
+    width: 490px;
+  }
+  
+  .nav1Text{
+    width:245px;
+  }
+  
+  .nav2{
+    width: 235px;
+  }
+  
+  .container2{
+    width: 470px;
+  }
+  
+  .nav2Text{
+    width:235px;
+  }
+  
+  .nav3{
+    width: 115px;
+  }
+  
+  /*
+  .nav3:hover{
+    animation: invertbg 0.5s forwards ease-in;
+  }
+  */
+  
+  .container3{
+    width: 230px;
+  }
+  
+  .nav3Text{
+    width:115px;
+  }
+  
+  /*
+  .container3:hover > .nav3Text{
+    animation: inverttx 0.5s forwards linear;
+  }
+  */
+  
+  .nav4{
+    width: 75px;
+  }
+  
+  .container4{
+    width: 150px;
+  }
+  
+  .nav4Text{
+    width:75px;
+  }
+  
+  .nav5{
+    width: 235px;
+  }
+  
+  .container5{
+    width: 470px;
+  }
+  
+  .nav5Text{
+    width:235px;
+  }
+  
+  .nav6{
+    width: 245px;
+  }
+  
+  .container6{
+    width: 490px;
+  }
+  
+  .nav6Text{
+    width:245px;
+  }
+
+  .toTopButton{
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 998;
+    width: 125px;
+    transform: translateX(50vw);
+    transition: all .5s ease-in-out;
+  }
+
+  .showToTopButton{
+    transform: translateX(0px);
+  }
+
+  .toTopContainer{
+    width: 250px;
+  }
+
+  .toTopText{
+    width:125px;
+  }

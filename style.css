@@ -146,7 +146,18 @@ button:active>div>h2{
   width: auto;
 }
 
+@media (max-width: 800px){
+  #img_box > img{
+    display: inline;
+    height: auto;
+    width: 100%;
+    margin-top:10%;
+  }
+}
+
 .blurb{
+  top: 50%;
+  left: 50%;
   text-align: right;
   width: 45vw;
   float: right;
@@ -154,7 +165,13 @@ button:active>div>h2{
 }
 
 .blurbText{
+  width: 45vw;
+  text-align: right;
   position: relative;
+  float: right;
+  position: absolute;
+  top: 50%; left: 75%;
+  transform: translate(-50%,-50%);
 }
 
 @media (max-width: 1250px){
@@ -164,8 +181,24 @@ button:active>div>h2{
 }
 
 @media (max-width: 800px){
-  .blurb{
-    position: relative;
+  .blurbText{
+    display: block;
+    margin-top: 20px;
+    top: 67.5%;
+    left: 0;
+    transform: none;
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  .blurbText{
+    display: block;
+    top: 50%;
+    position: absolute;
     bottom: 0px;
     text-align: right;
     width: 100%;
@@ -177,6 +210,8 @@ button:active>div>h2{
 }
 
 .embed-container { 
+margin-top: 10px;
+margin-bottom: 10px;
 position: relative; 
 padding-top: 20px;
 padding-bottom: 28.125%; 
@@ -196,17 +231,36 @@ height: 100%;
 @media (max-width: 800px){
   .embed-container { 
     position: relative; 
-    padding-bottom: 56.25%; 
+    padding-bottom: 76.25%; 
     height: 0; 
     overflow: hidden; 
     max-width: 100%; 
   } 
     
   .embed-container iframe, .embed-container object, .embed-container embed { 
+  display: block;
   position: absolute; 
-  top: 0; 
+  top: -15%; 
   left: 0; 
   width: 100%; 
   height: 100%; 
   }
+}
+
+@media (max-width: 600px){
+  .embed-container { 
+    position: relative; 
+    padding-bottom: 95%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+  } 
+  .embed-container iframe, .embed-container object, .embed-container embed { 
+    display: block;
+    position: absolute; 
+    top: -25%; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    }
 }

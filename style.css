@@ -107,6 +107,7 @@ section{
 }
 
 .socialBubble {
+  margin: 0px 0px;
   height: 50px;
   width: 50px;
   background-color: #ffffff00;
@@ -147,12 +148,65 @@ button:active>div>h2{
 
 .blurb{
   text-align: right;
-  margin-left: 50vw;
+  width: 45vw;
+  float: right;
+  position: relative;
+}
+
+.blurbText{
+  position: relative;
+}
+
+@media (max-width: 1250px){
+  .blurbText{
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 800px){
   .blurb{
+    position: relative;
+    bottom: 0px;
     text-align: right;
-    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.heading > h1{
+  display: inline-block;
+}
+
+.embed-container { 
+position: relative; 
+padding-top: 20px;
+padding-bottom: 28.125%; 
+height: 0; 
+overflow: hidden; 
+max-width: 100%; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 45vw; 
+height: 100%; 
+}
+
+@media (max-width: 800px){
+  .embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+  } 
+    
+  .embed-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
   }
 }

@@ -1,149 +1,214 @@
 /* --NAV SECTION-- */
 
 @keyframes move {
-    to {
-      transform: translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes mobileMove{
+  0% {
+    transform: translateX(0%);
   }
 
-  
-  @keyframes invertbg {
-    from {background-color: #ffffff;}
-    to {background-color: #000000;}
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes mobileMoveY {
+  0%{
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-43px);
+  }
+
+  100%{
+    transform: translateY(-43px);
+  }
+}
+
+@keyframes mobileMoveYSmall {
+  0%{
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-31px);
+  }
+
+  100%{
+    transform: translateY(-31px);
   }
   
-  @keyframes inverttx {
-    from {color: #000000;}
-    to {color: #FFFFFF;}
-  }
-  
-  .navButton{
-    overflow :hidden;
-    display:inline-block;
-    border: 1px solid #000000;
-    white-space: nowrap;
-  }
-  
-  .navContainer:hover{
-    animation: move 1.5s infinite ease-in-out;
-  }
-  
+}
+
+@keyframes invertbg {
+  from {background-color: #ffffff;}
+  to {background-color: #000000;}
+}
+
+@keyframes inverttx {
+  from {color: #000000;}
+  to {color: #FFFFFF;}
+}
+
+.navButton{
+  overflow: hidden;
+  display:inline-block;
+  border: 1px solid #000000;
+  white-space: nowrap;
+}
+
+@media (hover:none), (hover:on-demand) { 
   .navContainer{
     display: flex;
     flex-wrap: nowrap;
+    animation: mobileMove 3s infinite ease-in-out;
   }
-  
-  .navText{
-    line-height: 1;
-    font-size: 18px;
-    margin:0;
-    padding-left:0px;
-    text-align: left;
-  }
-  
-  .nav1{
-    width: 245px;
-  }
-  
-  .container1{
-    width: 490px;
-  }
-  
-  .nav1Text{
-    width:245px;
-  }
-  
-  .nav2{
-    width: 235px;
-  }
-  
-  .container2{
-    width: 470px;
-  }
-  
-  .nav2Text{
-    width:235px;
-  }
-  
-  .nav3{
-    width: 115px;
-  }
-  
-  /*
-  .nav3:hover{
-    animation: invertbg 0.5s forwards ease-in;
-  }
-  */
-  
-  .container3{
-    width: 230px;
-  }
-  
-  .nav3Text{
-    width:115px;
-  }
-  
-  /*
-  .container3:hover > .nav3Text{
-    animation: inverttx 0.5s forwards linear;
-  }
-  */
-  
-  .nav4{
-    width: 75px;
-  }
-  
-  .container4{
-    width: 150px;
-  }
-  
-  .nav4Text{
-    width:75px;
-  }
-  
-  .nav5{
-    width: 235px;
-  }
-  
-  .container5{
-    width: 470px;
-  }
-  
-  .nav5Text{
-    width:235px;
-  }
-  
-  .nav6{
-    width: 245px;
-  }
-  
-  .container6{
-    width: 490px;
-  }
-  
-  .nav6Text{
-    width:245px;
+  .socialBubble > .iconContainer > .icon{
+    animation: mobileMoveY 1.5s infinite ease-in-out;
+    animation-fill-mode: backwards;
   }
 
-  .toTopButton{
-    display: block;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 998;
-    width: 125px;
-    transform: translateX(50vw);
-    transition: all .5s ease-in-out;
+  @media (max-width: 800px){
+
+    .socialBubble > .iconContainer > .icon{
+      animation: mobileMoveYSmall 1.5s infinite ease-in-out;
+      animation-fill-mode: backwards;
+    }
+    
   }
 
-  .showToTopButton{
-    transform: translateX(0px);
-  }
+}
 
-  .toTopContainer{
-    width: 250px;
-  }
 
-  .toTopText{
-    width:125px;
-  }
+.navContainer:hover{
+  animation: move 1.5s infinite ease-in-out;
+}
+
+.navContainer{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navText{
+  line-height: 1;
+  font-size: 18px;
+  margin:0;
+  padding-left:0px;
+  text-align: left;
+}
+
+.nav1{
+  width: 245px;
+}
+
+.container1{
+  width: 490px;
+}
+
+.nav1Text{
+  width:245px;
+}
+
+.nav2{
+  width: 235px;
+}
+
+.container2{
+  width: 470px;
+}
+
+.nav2Text{
+  width:235px;
+}
+
+.nav3{
+  width: 115px;
+}
+
+/*
+.nav3:hover{
+  animation: invertbg 0.5s forwards ease-in;
+}
+*/
+
+.container3{
+  width: 230px;
+}
+
+.nav3Text{
+  width:115px;
+}
+
+/*
+.container3:hover > .nav3Text{
+  animation: inverttx 0.5s forwards linear;
+}
+*/
+
+.nav4{
+  width: 75px;
+}
+
+.container4{
+  width: 150px;
+}
+
+.nav4Text{
+  width:75px;
+}
+
+.nav5{
+  width: 235px;
+}
+
+.container5{
+  width: 470px;
+}
+
+.nav5Text{
+  width:235px;
+}
+
+.nav6{
+  width: 245px;
+}
+
+.container6{
+  width: 490px;
+}
+
+.nav6Text{
+  width:245px;
+}
+
+.toTopButton{
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 998;
+  width: 125px;
+  transform: translateX(50vw);
+  transition: all .5s ease-in-out;
+}
+
+.showToTopButton{
+  transform: translateX(0px);
+}
+
+.toTopContainer{
+  width: 250px;
+}
+
+.toTopText{
+  width:125px;
+}

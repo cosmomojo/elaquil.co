@@ -106,21 +106,109 @@ section{
   padding: 5em 2em;
 }
 
+.socials {
+  display: inline-block;
+}
+
 .socialBubble {
   margin: 0px 0px;
   height: 50px;
   width: 50px;
-  background-color: #ffffff00;
+  background-color: #ffffff;
   border-radius: 50%;
-  display: inline-block;
   border: 2px solid #000000;
+  display: inline-block;
+  font-size: 38px;
+  position: relative;
+  bottom: 3px;
+  cursor: pointer;
 }
 
+.socialBubble:hover > .iconContainer > .icon{
+  animation: moveY 0.75s infinite ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveY {
+  to {
+    transform: translateY(-43px);
+  }
+}
+
+.iconContainer{
+  display: inline-block;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+i{
+  position: relative;
+}
+
+.fa-instagram{
+  left: 7px;
+  top: 3px;
+}
+
+.fa-envelope{
+  left: 4px;
+  top: 3px;
+}
+
+.fa-vimeo-v{
+  left: 5px;
+  top: 3px;
+}
+
+.fa-linkedin-in{
+  left: 9px;
+  top: 3px;
+  font-size: 34px;
+}
+
+
 @media (max-width: 800px){
+  .iconContainer{
+    height: 31px;
+  }
   .socialBubble {
     height: 35px;
     width: 35px;
+    font-size: 27px;
   }
+  .fa-instagram{
+    left: 3.5px;
+    top: 1.5px;
+  }
+  
+  .fa-envelope{
+    left: 4px;
+    top: 0px;
+    font-size: 23px;
+  }
+  
+  .fa-vimeo-v{
+    left: 2.5px;
+    top: 1.5px;
+  }
+  
+  .fa-linkedin-in{
+    left: 6px;
+    top: 0px;
+    font-size: 23px;
+  }
+
+  @keyframes moveY {
+    to {
+      transform: translateY(-31px);
+    }
+  }
+
+}
+
+.secondIcon{
+  position: relative;
 }
 
 button:active{
@@ -205,13 +293,19 @@ button:active>div>h2{
   }
 }
 
+@media (max-width: 430px){
+  .blurbText{
+    font-size: 0.5rem;
+  }
+}
+
 .heading > h1{
   display: inline-block;
 }
 
 .embed-container { 
-margin-top: 10px;
-margin-bottom: 10px;
+margin-top: 40px;
+margin-bottom: 40px;
 position: relative; 
 padding-top: 20px;
 padding-bottom: 28.125%; 
@@ -263,4 +357,18 @@ height: 100%;
     width: 100%; 
     height: 100%; 
     }
+}
+
+.subtitleText{
+  margin-top: -5px;
+}
+
+@media (max-width: 800px){
+  .subtitleText{
+    margin-top: 0px;
+  }
+}
+
+.clientLink{
+  color:#000000;
 }

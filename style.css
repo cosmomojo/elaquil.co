@@ -81,6 +81,10 @@ p{
   font-size: var(--fs-h3);
 }
 
+a{
+  color: white;
+}
+
 img{
   display: block;
   width: 50vw;
@@ -150,6 +154,7 @@ section{
 }
 
 i{
+  color: var(--clr-dark);
   position: relative;
 }
 
